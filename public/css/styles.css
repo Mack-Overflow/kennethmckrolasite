@@ -1,0 +1,94 @@
+.parallaxHome {
+    background-image: url('/img/thor.jpeg');
+    /* background-image: url('https://drive.google.com/uc?export=download&id=1MIo0cQBYo56Brcy1xfjS49E49BjuJVib');  */
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* animation: slide 3s  infinite alternate; */
+}
+#outer {
+ display: table;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: screen;
+  width: 100%;
+}
+
+#middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bodyBg {
+    background-attachment: fixed;
+    background-repeat: none;
+}
+
+#whoAmI {
+    background-image: url('https://drive.google.com/uc?export=download&id=1l3Fo075-rHSYkRzzhr-C3qysu1-zgl83');
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#myProjects {
+    background-image: url('https://images.unsplash.com/photo-1604213410393-89f141bb96b8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#blogPage {
+    background-image: url('https://unsplash.com/photos/VgRa7KL7Pzk/download?force=true&w=2400');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#myFun {
+    background-image: url('https://drive.google.com/uc?export=download&id=1qPK_4slbOcYVBhwwHXOP7ObGGSOE_lFp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.wrapper {
+    overflow: hidden; 
+}
+
+.sliding-background {
+    z-index: 0;
+    background: url( 
+    "https://drive.google.com/uc?export=download&id=1qPK_4slbOcYVBhwwHXOP7ObGGSOE_lFp")
+    repeat-x;
+    background-position: center;
+    height: 600px;
+    width: 4000px;
+    animation: slide 10s linear infinite; 
+} 
+
+@keyframes slide { 
+    0% { 
+        transform: translate3d(0, 0, 0); 
+    } 
+
+    100% { 
+        transform: translate3d(-100px, 0, 100px); 
+    } 
+} 
