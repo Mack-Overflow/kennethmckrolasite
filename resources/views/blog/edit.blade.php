@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Write a blog post')
+@section('title', 'Edit Blog Post')
 @section('content')
 <div class="fixed z-10 inset-0 overflow-y-auto" id="">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -15,17 +15,17 @@
                 <a href="{{ route('blog') }}" class="float-left absolute">
                     <x-backarrow />
                 </a>
-                <h1 class="text-2xl text-center mx-auto">New Post</h1>
+                <h1 class="text-2xl text-center mx-auto">Edit Post</h1>
             </div>
 
-            <form action="/uploadBlogPost" method="POST" enctype="multipart/form-data">
+            <form action="/updateBlogPost" method="PUT" enctype="multipart/form-data">
                 @csrf
                 <div class="mx-auto">
                     <div class="mt-1 mx-auto">
                         <label class="pb-2">Post Title</label>
                         <input type="text" name="title"
                             class="mb-4 shadow-sm p-1 focus:ring-blue-400 block w-3/4 sm:text-sm border-2 border-gray-500 border-rounded-md rounded-md"
-                            placeholder="Write a title for the post here">
+                            placeholder="{{ $blogpost->title }}">
 
                         <div class="inline-flex space-x-2">
                             <label class="pb-2 inline-flex">Article or Video URL</label>
@@ -33,11 +33,11 @@
                         </div>
                         <input type="text" name="url"
                             class="mb-4 shadow-sm p-1 focus:ring-blue-400 block w-3/4 sm:text-sm border-2 border-gray-500 border-rounded-md rounded-md"
-                            placeholder="https://youtube.com/asdf-jkl">
+                            placeholder="{{ $blogpost->url }}">
 
                         <label class="pb-2">Post Body</label>
                         <textarea type="text" name="body" rows="5"
-                            class="mb-4 shadow-sm p-1 focus:ring-blue-400 block w-3/4 sm:text-sm border-2 border-gray-500 border-rounded-md rounded-md"></textarea>
+                            class="mb-4 shadow-sm p-1 focus:ring-blue-400 block w-3/4 sm:text-sm border-2 border-gray-500 border-rounded-md rounded-md">{{ $blogpost->body }}</textarea>
                     </div>
                     <input Value="Submit" type="submit"
                         class="rounded-lg mx-auto w-1/2 bg-blue-400 hover:bg-gray-500 hover:text-gray-200" />

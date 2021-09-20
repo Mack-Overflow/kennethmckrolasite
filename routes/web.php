@@ -1,15 +1,17 @@
 <?php
 
-use App\Http\Controllers\Auth\EmailVerificationController;
-use App\Http\Controllers\Auth\LogoutController;
-use App\Http\Controllers\UserController;
 use App\Http\Livewire\Auth\Login;
-use App\Http\Livewire\Auth\Passwords\Confirm;
+use App\Http\Livewire\Auth\Verify;
+use App\Http\Livewire\Auth\Register;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UserController;
 use App\Http\Livewire\Auth\Passwords\Email;
 use App\Http\Livewire\Auth\Passwords\Reset;
-use App\Http\Livewire\Auth\Register;
-use App\Http\Livewire\Auth\Verify;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LinkedinController;
+use App\Http\Livewire\Auth\Passwords\Confirm;
+use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Auth\EmailVerificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +29,16 @@ Route::view('whoAmI', 'me')->name('whoAmI');
 Route::view('development', 'projects/development')->name('development');
 Route::view('ml', 'projects/ml')->name('ml');
 Route::view('cybersec', 'projects/cybersec')->name('cybersec');
-Route::view('blog', 'blog/index')->name('blog');
+Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
+// Route::get('blog', [LinkedinController::class, 'index'])->name('blog.scraper');
 Route::view('fun', 'myFun')->name('fun');
 
-Route::view('addBlogPost', [UserController::class, 'blog/form'])->name('addBlogPost');
-Route::get('createBlogPost', [UserController::class, 'create'])->name('create');
-// Route::post('uploadBlogPost', [UserController::class, 'update'])
+Route::view('addBlogPost', [BlogController::class, 'blog/form'])->name('addBlogPost');
+//Route::get('createBlogPost', [BlogController::class, 'create'])->name('create');
+Route::post('uploadBlogPost', [BlogController::class, 'create']);
+Route::get('editBlogPost/{blogpost}', [BlogController::class, 'edit'])->name('blog.edit');
+Route::put('updateBlogPost', [BlogController::class, 'update'])->name('blog.update');
+Route::delete('/blog/{blogpost}', [BlogController::class, 'destroy'])->name('blog.delete');
 
 Route::middleware('admin')->group(function () {
     return 0;

@@ -17,7 +17,13 @@ class BlogPosts extends Model
     protected $fillable = [
         'title',
         'url',
-        'body',
-        'date_posted'
+        'body'
     ];
+
+    /**
+     * Table associated with model
+     * 
+     * @var array;
+     */
+    protected $table = 'blogs';
 }

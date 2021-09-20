@@ -15,18 +15,19 @@
                 class="font-medium text-gray-500 hover:text-green-400 inline-block text-center md:text-left">
                 Web Development
             </a>
-            <a href="{{ route('ml') }}"
-                class="font-medium text-gray-500 hover:text-green-400 inline-block text-center md:text-left">
-                Machine Learning
+            {{-- <a href="{{ route('ml') }}"
+            class="font-medium text-gray-500 hover:text-green-400 inline-block text-center md:text-left">
+            Machine Learning
             </a>
             <a href="{{ route('cybersec') }}"
                 class="font-medium text-gray-500 hover:text-green-400 inline-block text-center md:text-left">
                 Cybersecurity
-            </a>
+            </a> --}}
         </div>
     </div>
 
-    <a href="{{ route('blog') }}" class="font-medium text-gray-500 hover:text-green-400 block text-center">Blog</a>
+    <a href="{{ route('blog.index') }}"
+        class="font-medium text-gray-500 hover:text-green-400 block text-center">Blog</a>
 
     <a href="{{ route('fun') }}" class="font-medium text-gray-500 hover:text-green-400 block text-center">My Fun</a>
 </div>
