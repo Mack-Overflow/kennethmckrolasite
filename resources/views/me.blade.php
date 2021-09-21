@@ -37,8 +37,6 @@
             <div>
                 <video src="https://drive.google.com/uc?export=download&id=11AhGdXTn5d4me3tz24XIOrZOgbgIAWLt" controls
                     class="my-4 w-2/3 sm:h-1/3 sm:w-1/3 md:h-1/6 md:w-1/4 mx-auto block rounded-md border-2"></video>
-                <img class="my-4 w-full sm:h-2/3 sm:w-2/3 md:h-1/3 md:w-1/3 mx-auto block rounded-md border-2"
-                    src="https://drive.google.com/uc?export=download&id=1qdbDmqQGWftY6FAAU3qJmmVdGZ_2nZ2g" alt="">
             </div>
             <div class="mx-auto flex flex-col space-y-4 container pt-5">
                 <h2 class="text-xl font-bold text-center text-gray-900 block md:w-2/3 mx-auto">

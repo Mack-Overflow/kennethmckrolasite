@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogPosts;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
@@ -11,7 +12,11 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogposts = BlogPosts::all();
+        //Cache database entries
+        $blogposts = cache()->remember('blog-index', 60 * 60 * 4, function () {
+            return BlogPosts::all();
+        });
+        // BlogPosts::all();
         return view('blog/index', ['blogposts' => $blogposts]);
     }
 
