@@ -15,7 +15,7 @@
                 <span class="block xl:inline">McKrola</span>
             </h1>
             <h2 class="inner text-gray-100 text-center text-xl md:w-1/2">
-                Amateur <span class="text-green-400 font-bold">software engineer/developer,</span> aspiring <span
+                <span class="text-green-400 font-bold">Software engineer/developer,</span> aspiring <span
                     class="font-bold">artificial intelligence</span> engineer and <span
                     class="text-red-600 font-bold">red-team</span> security expert
             </h2>
