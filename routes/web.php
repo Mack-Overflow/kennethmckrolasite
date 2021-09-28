@@ -29,8 +29,8 @@ Route::view('whoAmI', 'me')->name('whoAmI');
 Route::view('development', 'projects/development')->name('development');
 Route::view('ml', 'projects/ml')->name('ml');
 Route::view('cybersec', 'projects/cybersec')->name('cybersec');
-Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
-// Route::get('blog', [LinkedinController::class, 'index'])->name('blog.scraper');
+Route::get('blog', [BlogController::class, 'index'])->name('blog');
+// Route::get('blog', [LinkedinController::class, 'index'])->name('blog');
 Route::view('fun', 'myFun')->name('fun');
 
 Route::view('addBlogPost', [BlogController::class, 'blog/form'])->name('addBlogPost');

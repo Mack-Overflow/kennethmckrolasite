@@ -13,10 +13,11 @@ class BlogController extends Controller
     public function index()
     {
         //Cache database entries
-        $blogposts = cache()->remember('blog-index', 60 * 60 * 4, function () {
-            return BlogPosts::all();
-        });
-        // BlogPosts::all();
+        // $blogposts = cache()->remember('blog-index', 60 * 60 * 4, function () {
+        //     return BlogPosts::all();
+        // });
+        // 
+        $blogposts = BlogPosts::all();
         return view('blog/index', ['blogposts' => $blogposts]);
     }
 

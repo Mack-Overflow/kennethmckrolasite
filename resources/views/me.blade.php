@@ -31,22 +31,26 @@
                     {{-- One of my biggest passions is working out & lifting weights... pump-labe --}}
                     <br /> <br />Lifting weights is also a huge part of my life and my favorite way to compete
                     with myself and push my own limits. It's how I gear my mind to crave personal
-                    improvement.
+                    improvement. <br /> <br />
+                    Here I am throwing up a light 335
                 </h2>
             </div>
             <div>
                 <video src="https://drive.google.com/uc?export=download&id=11AhGdXTn5d4me3tz24XIOrZOgbgIAWLt" controls
-                    class="my-4 w-2/3 sm:h-1/3 sm:w-1/3 md:h-1/6 md:w-1/4 mx-auto block rounded-md border-2"></video>
+                    class="my-4 w-3/4 sm:h-1/3 sm:w-1/3 md:h-1/6 md:w-1/4 mx-auto block rounded-md border-2"></video>
             </div>
-            <div class="mx-auto flex flex-col space-y-4 container pt-5">
+            {{-- <div class="mx-auto flex flex-col space-y-4 container pt-5">
                 <h2 class="text-xl font-bold text-center text-gray-900 block md:w-2/3 mx-auto">
                     My friends are a big deal to me, and nobody goes bigger than us.
                 </h2>
             </div>
             <div>
                 <img src="" alt="">
-            </div>
+            </div> --}}
         </div>
     </div>
+    <footer class="grid grid-cols-1 space-y-4 mx-auto">
+        <x-sidelinks />
+    </footer>
 </div>
 @endsection

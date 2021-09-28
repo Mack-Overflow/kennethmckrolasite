@@ -16,17 +16,19 @@ class ScraperService
      */
     public function scrape($url)
     {
-        $client  = new Client(HttpClient::create(['timeout' => 60]));
+        $client  = new Client();
         $crawler = $client->request('GET', $url);
         //Get outline of all shares
-        $sharesOutline = $crawler->filter('pv-recent-activity-detail__outlet-container div')->each(function ($node) {
+        $sharesOutline = $crawler->filter('.pv-recent-activity-detail__outlet-container')->each(function ($node) {
+            $shares = $node->text();
+            return compact('shares');
+        });
+
+        $body = $crawler->filter('.feed-shared-text div')->each(function ($node) {
             return $node->text();
         });
 
-        $body = $crawler->filter('.breakText div')->each(function ($node) {
-            return $node->text();
-        });
-
+        return $sharesOutline;
         //Get the link to view a specific job details
         // $links = $crawler->filter('.listResults a.s-link')->each(function ($node) {
         //     $href  = 'https://stackoverflow.com' . $node->attr('href');
@@ -45,6 +47,6 @@ class ScraperService
         //     });
         // });
 
-        // return compact('titles', 'location', 'time', 'links', 'tags');
+        //return compact('titles', 'location', 'time', 'links', 'tags');
     }
 }

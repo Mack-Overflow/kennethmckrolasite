@@ -12,7 +12,7 @@
         <div class="inline-block align-bottom bg-white opacity-75 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all md:my-8 md:align-middle md:max-w-xl md:w-full md:p-6"
             role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <div class="flex flex-col-2">
-                <a href="{{ route('blog.index') }}" class="float-left absolute">
+                <a href="{{ route('blog') }}" class="float-left absolute">
                     <x-backarrow />
                 </a>
                 <h1 class="text-2xl text-center mx-auto">New Post</h1>

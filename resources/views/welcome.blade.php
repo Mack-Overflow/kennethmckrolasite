@@ -29,7 +29,7 @@
         alt="">
     <footer class="grid grid-cols-1 space-y-4 mx-auto">
         <x-sidelinks />
-        <a href="" class="text-center text-lg text-gray-300 hover:text-green-400">Log In</a>
+        {{-- <a href="" class="text-center text-lg text-gray-300 hover:text-green-400">Log In</a> --}}
     </footer>
 </div>
 @endsection

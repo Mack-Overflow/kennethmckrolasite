@@ -9,7 +9,7 @@
             <h1 class="text-5xl text-center text-gray-700 py-5" style="font-family: 'Oswald', sans-serif;">
                 What I'm learning about</h1>
             <div id="blogBody" class="container mx-auto">
-                {{-- @if() @endif--}}
+                @if(Auth::user())
                 <div id="addPost"
                     class="grid grid-cols-1 mb-4 md:mb-6 text-center mx-auto p-3 border-2 border-gray-500 w-96">
                     <h3 class="pb-2 md:pb-3 text-xl">
@@ -19,9 +19,11 @@
                         <x-plusicon />
                     </a>
                 </div>
+                @endif
                 <div id="postList" class="space-y-5 md:space-y-8 container mx-auto w-full min-h-screen">
                     @foreach($blogposts as $blogpost)
-                    <div class="text-center grid grid-cols-1 py-3 md:py-5 border-2 border-gray-600">
+                    <div
+                        class="text-center grid grid-cols-1 py-3 md:py-5 border-2 border-gray-600 bg-opacity-50 bg-gray-300">
                         <div class="w-3/4 mx-auto grid grid-cols-1 text-center text-3xl font-bold">
                             {{$blogpost->title}}
                             {{-- Add edit, delete buttons here with heroicons --}}
@@ -31,20 +33,25 @@
                         <p class="text-lg pb-8">
                             {{$blogpost->body}}
                         </p>
-                        <a class="" href="{{ route('blog.edit', $blogpost) }}">Edit</a>
+                        {{-- <a class="" href="{{ route('blog.edit', $blogpost) }}">Edit</a>
                         <form method="POST" onsubmit="return confirm('Do you really wish to delete this post?')"
                             action="{{ route('blog.delete', $blogpost) }}">
                             @csrf
+
                             @method("delete")
                             <button title="Delete" class="">Delete
                                 Post
                             </button>
-                        </form>
+                        </form> --}}
                     </div>
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
+    <footer class="grid grid-cols-1 space-y-4 mx-auto">
+        <x-sidelinks />
+        {{-- <a href="" class="text-center text-lg text-gray-300 hover:text-green-400">Log In (Test CRUD)</a> --}}
+    </footer>
 </div>
 @endsection

@@ -11,7 +11,7 @@ class LinkedinController extends Controller
 {
     public function index(ScraperService $scraperService)
     {
-        $url = 'https://www.linkedin.com/in/kenneth-mckrola/detail/recent-activity/shares';
+        $url = 'https://www.linkedin.com/in/kenneth-mckrola/detail/recent-activity/shares/';
 
         $data = $scraperService->scrape($url);
 

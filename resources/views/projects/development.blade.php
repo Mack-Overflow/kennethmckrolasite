@@ -93,5 +93,8 @@
             </div>
         </div>
     </div>
+    <footer class="grid grid-cols-1 space-y-4 mx-auto">
+        <x-sidelinks />
+    </footer>
 </div>
 @endsection
