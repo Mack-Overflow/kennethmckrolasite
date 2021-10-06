@@ -1,5 +1,5 @@
 <div id="navigation" x-data="{ show: false }"
-    class="text-xl md:text-lg grid grid-cols-1 md:grid-cols-5 md:space-x-2 mx-auto mb-3">
+    class="text-xl md:text-lg grid grid-cols-1 md:grid-cols-3 md:space-x-2 mx-auto mb-3">
     <a href="{{route('home') }}" class="font-medium text-gray-500 hover:text-green-400 block text-center">Home</a>
 
     <a href="{{ route('whoAmI') }}" class="font-medium text-gray-500 hover:text-green-400 block text-center w-24">Who I
