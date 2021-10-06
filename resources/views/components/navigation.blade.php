@@ -26,7 +26,8 @@
         </div>
     </div>
 
-    <a href="{{ route('blog') }}" class="font-medium text-gray-500 hover:text-green-400 block text-center">Blog</a>
+    {{-- <a href="{{ route('blog') }}" class="font-medium text-gray-500 hover:text-green-400 block text-center">Blog</a>
+    --}}
 
     {{-- <a href="{{ route('fun') }}" class="font-medium text-gray-500 hover:text-green-400 block text-center">My
     Fun</a> --}}
