@@ -24,8 +24,8 @@
     <h3 class="text-gray-300 text-center pt-2" style="font-family: 'Oswald', sans-serif;">
         <span class="text-green-400">Hosted on Raspberry Pi</span> in my college apartment
     </h3>
-    <img class="h-8 w-8 mx-auto"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FColor%2FPNG%2F512%2FLogos%2Fraspberry_pi-512.png&f=1&nofb=1"
+    <img class="w-16 mx-auto"
+        src="https://download.logo.wine/logo/Raspberry_Pi/Raspberry_Pi-Logo.wine.png"
         alt="">
     <footer class="grid grid-cols-1 space-y-4 mx-auto">
         <x-sidelinks />
